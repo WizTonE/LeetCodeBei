@@ -518,11 +518,11 @@ async function loadingStorageAccount(storageConnectionString){
     const tokenString  = await streamToString(tokenBlobResponse.readableStreamBody);
     fs.writeFile("credentials.json", credentialString, (err) => {
         if (err) return console.error(err);
-        console.log('Token stored to', TOKEN_PATH);
+        console.log('Token stored to', "credentials.json");
     });
     fs.writeFile("token.json", tokenString, (err) => {
         if (err) return console.error(err);
-        console.log('Token stored to', TOKEN_PATH);
+        console.log('Token stored to', "token.json");
     });
 }
 
@@ -541,7 +541,6 @@ async function streamToString(readableStream) {
 
 
 const app = express();
-var client = Object;
 const keyVaultConfig = await loadingKeyVault();
 await loadingStorageAccount(keyVaultConfig.storageConnectionString.value);
 // loadingKeyVault().then((keyVaultConfig) => {
@@ -553,7 +552,7 @@ var config = {
     channelSecret: keyVaultConfig.channelSecret.value
 };
 loadGoogleSheet(keyVaultConfig.spreadsheetId.value);
-client  = new line.Client(config);
+const client  = new line.Client(config);
 app.get('/getquestion', function (req, res) {
     var diff = req.query.diff;
     var tag = req.query.tag;
