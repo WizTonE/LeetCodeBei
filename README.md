@@ -13,3 +13,4 @@ A linebot help you practising leetcode better.
 - Storage (Azure Storage Account)
 - RDS (Azure Cosmos DB)
 - Refactaring (Re-modeling)
+- CI/CD
