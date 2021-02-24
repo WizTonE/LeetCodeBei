@@ -1,5 +1,5 @@
 # LeetCodeBei
-It's a linebot help you to practise leetcode better.
+A linebot help you practising leetcode better.
 
 ## Topic (Skill stack)
 - Linebot platform
@@ -7,7 +7,7 @@ It's a linebot help you to practise leetcode better.
 - Google Sheet api
 - Docker
 - Cloud Container Registry (Azure Container Registy)
-- Clound Service (Azure App Service)
+- Cloud Service (Azure App Service)
 - Nodejs, Cron
 - Vault (Azure KeyVault)
 - Storage (Azure Storage Account)
